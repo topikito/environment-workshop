@@ -5,4 +5,4 @@
     * Should use `ubuntu/16.04`
     * One machine should have `PHP 7.1`
     * Another machine should have `elastic search`
-    * Machine should be inside a `vm` folder with a namespace for the machines grouo you'll be creating
+    * Machine should be inside a `vm` folder with a namespace for the machines group you'll be creating
