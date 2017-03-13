@@ -1,0 +1,15 @@
+Vagrant.configure(2) do |config|
+
+  config.vm.define "websrv"  
+  config.vm.box = "bento/ubuntu-16.04"
+  config.ssh.insert_key = false
+
+Vagrant::Config.run do |config|
+  config.vm.network :bridged
+end
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.verbose = "v"
+    ansible.playbook = "php71.yml"
+  end
+end

@@ -1,0 +1,5 @@
+---
+- hosts: all
+  sudo: true
+  roles:
+    - { role: elastic.elasticsearch, es_instance_name: "node1" }
