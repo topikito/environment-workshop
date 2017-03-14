@@ -1,0 +1,10 @@
+---
+- hosts: websrv
+  sudo: true
+  roles:
+    - { role: elnebuloso.php71 }
+
+- hosts: elasticsrv
+  sudo: true
+  roles:
+    - { role: elastic.elasticsearch, es_instance_name: "node1" }
