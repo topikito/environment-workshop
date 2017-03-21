@@ -17,6 +17,3 @@
         force=yes
       with_items:
         - apache2*
-
-    - name: restart nginx
-      command: service nginx restart
