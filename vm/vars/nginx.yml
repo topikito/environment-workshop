@@ -2,10 +2,8 @@ nginx_remove_default_vhost: true
 nginx_vhosts:
   - listen: "80 default_server"
     server_name: "example.com"
-    root: "/src/html/"
+    root: "/src"
     index: "index.php index.html index.htm"
-    access_log: "/src/logs/access.log"
-    error_log: "/src/logs/error.log"
     extra_parameters: |
       location ~ \.php$ {
           fastcgi_split_path_info ^(.+\.php)(/.+)$;

@@ -9,6 +9,10 @@
     - { role: geerlingguy.nginx }
     - php71
 
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
+
 - hosts: elasticsrv
   sudo: true
   roles:
