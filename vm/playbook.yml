@@ -1,0 +1,19 @@
+---
+- hosts: websrv
+
+  vars_files:
+    - vars/nginx.yml
+  sudo: true
+
+  roles:
+    - { role: geerlingguy.nginx }
+    - php71
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
+
+- hosts: elasticsrv
+  sudo: true
+  roles:
+    - { role: elastic.elasticsearch, es_instance_name: "node1" }
